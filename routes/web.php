@@ -13,3 +13,7 @@ Route::get('/counter', function () {
 Route::get('/search', function () {
     return view('Search');
 });
+
+Route::get('/livewire', function () {
+    return view('Livewire');
+});
