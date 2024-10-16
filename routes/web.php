@@ -14,6 +14,6 @@ Route::get('/search', function () {
     return view('Search');
 });
 
-Route::get('/livewire', function () {
-    return view('Livewire');
+Route::get('/input', function () {
+    return view('Input');
 });
