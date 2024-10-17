@@ -4,5 +4,6 @@
         <a href="/counter" class="btn btn-primary">counter</a>
         <a href="/search" class="btn btn-primary">Search</a>
         <a href="/input" class="btn btn-primary">Input</a>
+        <a href="/crud" class="btn btn-primary">CRUD</a>
     </div>
 </div>
