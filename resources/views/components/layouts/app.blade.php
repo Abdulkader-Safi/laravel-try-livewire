@@ -13,6 +13,10 @@
 
 <body>
     <div class="container">
+        @livewire('layout.Navbar')
+
+        <livewire:flash-message />
+
         {{ $slot }}
     </div>
 

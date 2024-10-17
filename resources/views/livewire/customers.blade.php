@@ -1,10 +1,17 @@
 <div class="my-4 gap-3">
 
-    {{-- @livewire('flash-message') --}}
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <button wire:navigate href='/customers/create' class="btn btn-success btn-sm">Create</button>
+        </div>
 
-    <livewire:flash-message />
+        <div class="col-auto">
+            <input type="text" wire:model.live.debounce.150ms='search' class="form-control"
+                placeholder="Search customers... " />
+        </div>
+    </div>
 
-    <button wire:navigate href='/customers/create' class="btn btn-success btn-sm">Create</button>
+
 
     <table class="table">
         <thead>

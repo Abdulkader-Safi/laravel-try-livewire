@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Register;
 use App\Livewire\CreateCustomer;
 use App\Livewire\Customers;
 use App\Livewire\EditCustomer;
@@ -26,7 +28,14 @@ Route::get('/crud', function () {
     return view('Crud');
 });
 
-Route::get('/customers', Customers::class);
-Route::get('/customers/create', CreateCustomer::class);
-Route::get('/customers/{customer}', ViewCustomer::class);
-Route::get('/customers/{customer}/edit', EditCustomer::class);
+Route::get('/register', Register::class);
+Route::get('/login', Login::class)->name('login');
+
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::get('/customers', Customers::class);
+    Route::get('/customers/create', CreateCustomer::class);
+    Route::get('/customers/{customer}', ViewCustomer::class);
+    Route::get('/customers/{customer}/edit', EditCustomer::class);
+});
+
+
