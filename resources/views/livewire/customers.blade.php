@@ -13,14 +13,14 @@
 
 
 
-    <table class="table">
+    <table class="table table-sm">
         <thead>
             <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Action</th>
+                <th scope="col" style="width: 20%;">No.</th>
+                <th scope="col" style="width: 20%;">Name</th>
+                <th scope="col" style="width: 20%;">Email</th>
+                <th scope="col" style="width: 20%;">Phone</th>
+                <th scope="col" style="width: 20%;">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -41,4 +41,9 @@
             @endforeach
         </tbody>
     </table>
+
+
+    <div>
+        {{ $customers->links() }}
+    </div>
 </div>
